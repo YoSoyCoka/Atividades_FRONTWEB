@@ -85,6 +85,50 @@ function calcular(){
 
     document.getElementById("resto").innerHTML = valor1 + " % " + valor2;
     document.getElementById("resuresto").innerHTML = resto;
+}
 
+function mudarcor(cor){
 
+    document.body.style.backgroundColor = cor;
+}
+
+function ocultarParagrafo() {
+    var paragrafo = document.getElementById("paragrafo");
+    paragrafo.style.display = paragrafo.style.display === "block" ? "none" : "block";   
+  }
+
+// function pesquisarpalavra_no_texto(){
+//     var texto = document.getElementById("te").value;
+//     var palavra = document.getElementById("palavra").value;
+//     var resultado = document.getElementById("resultado_texto");
+
+//     var ocorrencias = texto.match(new RegExp(palavra, "gi")).length;
+
+//     resultado.innerHTML = "A palavra " + palavra + " ocorre " + ocorrencias + " vezes no texto.";
+// }
+function pesquisar() {
+  var texto = document.getElementById("texto").textContent;
+  var palavra = document.getElementById("palavra").value;
+  var resultado = document.getElementById("resultado_texto");
+
+  if (palavra === "") {
+    resultado.innerHTML = "Por favor, digite uma palavra para pesquisar.";
+    return;
+  }
+
+  var ocorrencias = texto.match(new RegExp(palavra, "gi"));
+
+  if (ocorrencias === null) {
+    resultado.innerHTML = "A palavra " + palavra + " não foi encontrada no texto.";
+    return;
+  }
+
+  resultado.innerHTML = "A palavra " + palavra + " ocorre " + ocorrencias.length + " vezes no texto.";
+
+  var novoTexto = texto;
+  for (var i = 0; i < ocorrencias.length; i++) {
+    novoTexto = novoTexto.replace(new RegExp(ocorrencias[i], "gi"), "<span class='destaque'>" + ocorrencias[i] + "</span>");
+  }
+
+  document.getElementById("texto").innerHTML = novoTexto;
 }
