@@ -1,0 +1,59 @@
+<html>
+   <head>
+      <title>Atividade</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <link rel="stylesheet" href="style.css" type="text/css">
+   </head>
+   <body>
+      <h1 id="titlemenu">Atividade</h1>
+      <hr>
+      <h3>Questão 1</h3>
+      <p>Comportamento interativo, Validações de formularios e Comunicar com servidores</p>
+      <br>
+      <hr>
+      <h3>Questão 2</h3>
+      <input type="date" name="data1" id="data1" placeholder="Coloque uma data aqui"> <br><br>
+      <button onclick="escrever_data_extenso()">Escrever por Extenso</button>
+      <p id="resultado"></p>
+      <br>
+      <hr>
+      <h3>Questao 3</h3>
+      <input type="number" name="salario" id="salario" placeholder="Coloque seu salario aqui"> 
+      <button onclick="reajustarsalario()">Reajustar</button>
+      <p id="antesreajuste"></p>
+      <p id="percentualaumento"></p>
+      <p id="valoraumento"></p>
+      <p id="novosalario"></p>
+      <br>
+      <hr>
+      <h3>Questao 4</h3>
+      <input type="number" name="numero1" id="numero1" placeholder="Coloque um numero aqui">
+      <input type="number" name="numero2" id="numero2" placeholder="Coloque um numero aqui"> <br><br>
+      <button onclick="calcular()">Calcular Resultados</button>
+      <br><br>
+      <table border="1">
+         <tr>
+            <td>Operacao</td>
+            <td>Valor</td>
+         </tr>
+         <tr>
+            <td id="soma"></td>
+            <td id="resusoma"></td>
+         </tr>
+         <tr>
+            <td id="multi"></td>
+            <td id="resumulti"></td>
+         </tr>
+         <tr>
+            <td id="divi"></td>
+            <td id="resudivi"></td>
+         </tr>
+         <tr>
+            <td id="resto"></td>
+            <td id="resuresto"></td>
+         </tr>
+      </table>
+      <hr>
+      <script src="funcoes.js"></script>
+   </body>
+</html>
