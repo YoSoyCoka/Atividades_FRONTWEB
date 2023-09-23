@@ -97,24 +97,10 @@ function ocultarParagrafo() {
     paragrafo.style.display = paragrafo.style.display === "block" ? "none" : "block";   
   }
 
-// function pesquisarpalavra_no_texto(){
-//     var texto = document.getElementById("te").value;
-//     var palavra = document.getElementById("palavra").value;
-//     var resultado = document.getElementById("resultado_texto");
-
-//     var ocorrencias = texto.match(new RegExp(palavra, "gi")).length;
-
-//     resultado.innerHTML = "A palavra " + palavra + " ocorre " + ocorrencias + " vezes no texto.";
-// }
 function pesquisar() {
   var texto = document.getElementById("texto").textContent;
   var palavra = document.getElementById("palavra").value;
   var resultado = document.getElementById("resultado_texto");
-
-  if (palavra === "") {
-    resultado.innerHTML = "Por favor, digite uma palavra para pesquisar.";
-    return;
-  }
 
   var ocorrencias = texto.match(new RegExp(palavra, "gi"));
 
@@ -145,5 +131,11 @@ function validarnumero(){
 function validarsenha(){
     var senha = document.getElementById("senha").value;
     var login = document.getElementById("usuario").value;
+    var resultado = document.getElementById("resultadologin");
+
+    
+    resultado.innerHTML = "Senha valida";
+    senha.style.display = "none";
+    login.style.display = "none";
+
 }
-`
