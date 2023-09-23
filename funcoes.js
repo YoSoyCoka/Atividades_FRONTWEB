@@ -132,3 +132,18 @@ function pesquisar() {
 
   document.getElementById("texto").innerHTML = novoTexto;
 }
+
+function validarnumero(){
+    var numero = window.prompt("Digite um numero");
+
+    while (numero < 0 || numero > 10) {
+        numero = window.prompt("Numero Invalido, digite novamente");
+    }  
+    
+}
+
+function validarsenha(){
+    var senha = document.getElementById("senha").value;
+    var login = document.getElementById("usuario").value;
+}
+`
